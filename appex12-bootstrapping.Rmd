@@ -1,0 +1,57 @@
+---
+title: "Bootstrap Confidence Intervals"
+author: ""
+date: ""
+output: 
+  html_document
+---
+
+```{r set-up, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE,
+                      comment = "#>", highlight = TRUE,
+                      fig.align = "center")
+```
+
+
+# Packages and Data
+
+```{r packages}
+library(tidyverse)
+library(infer)
+```
+
+Consider 20 1 bedroom apartments that were randomly selected on 
+Craigslist Manhattan from apartments listed as "by owner."
+
+```{r read_data}
+manhattan <- read_csv("data/manhattan.csv")
+```
+
+# Exercises
+
+## Exercise 1
+
+Create a 90% bootstrap confidence interval for the population median price of
+1 bedroom apartments in Manhattan.
+
+## Exercise 2
+
+Create a 98% bootstrap confidence interval for the population mean price of
+1 bedroom apartments in Manhattan. Write out an appropriate interpretation of
+this interval.
+
+## Exercise 3
+
+Compare the two confidence intervals. Which interval is wider?
+
+## Exercise 4
+
+Can we use these intervals to make an accurate statement about the mean/median 
+price of 1 bedroom apartments in the *Bronx*?
+
+## Stage, commit and push
+
+1. Stage your modified files.
+2. Commit your changes with an informative message.
+3. Push your changes to your GitHub repo.
+4. Verify your files were updated on GitHub.
